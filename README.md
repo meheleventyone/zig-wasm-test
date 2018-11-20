@@ -24,5 +24,5 @@ cd www
 tsc wasmtest.ts
 ```
 
-# Running
+## Running
 Start the web server of your choice serving the www folder and navigate to wasmtest.html in your browser of choice. The value 7 should be output in the console.
