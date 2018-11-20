@@ -1,7 +1,8 @@
 # zig-wasm-test
 A minimal Web Assembly example built from Zig's init-lib.
 
-I expanded on this great gist from @josephg:
+I expanded on this great gist from @josephg 
+
 https://gist.github.com/josephg/873a21d4558fd69aeccea19c3df96672
 
 To build this project you need to follow the steps there to get a wasm enabled version of LLVM setup.
