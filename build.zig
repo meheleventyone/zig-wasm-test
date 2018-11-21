@@ -15,6 +15,8 @@ pub fn build(b: *Builder) void {
     const test_step = b.step("test", "Run library tests");
     test_step.dependOn(&main_tests.step);
 
-    b.default_step.dependOn(&obj.step);
-    _ = b.exec(wasmLink);
+    const wasm_link = b.addCommand(".", b.env_map, wasmLink);
+    wasm_link.step.dependOn(&obj.step);
+
+    b.default_step.dependOn(&wasm_link.step);
 }
