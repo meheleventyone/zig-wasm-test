@@ -9,13 +9,13 @@ To build this project you need to follow the steps there to get a wasm enabled v
 
 ## Building
 
-To build this project with a working Zig and TypeScript install at the project root just type.
+To build this project with a working Zig at 0.4.0 and TypeScript install at the project root just type.
 
 ```
-zig build -Drelease-small
+zig build install
 ```
 
-You need to move the resulting wasmtest.wasm file from /zig-cache/ to /www/. One has been committed if you're happy omitting this step.
+You need to move the resulting wasmtest.wasm file from /bin/ to /www/. One has been committed if you're happy omitting this step.
 
 For good measure you can then build the TypeScript file:
 
