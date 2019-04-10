@@ -1,7 +1,7 @@
 # zig-wasm-test
 A minimal Web Assembly example built from Zig's init-lib.
 
-I expanded on this great gist from @josephg.
+Originally expanded on this great gist from @josephg but now superceded with better support in 0.4.0:
 
 https://gist.github.com/josephg/873a21d4558fd69aeccea19c3df96672
 
