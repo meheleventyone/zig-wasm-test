@@ -1,21 +1,15 @@
 # zig-wasm-test
 A minimal Web Assembly example built from Zig's init-lib.
 
-Originally expanded on this great gist from @josephg but now superceded with better support in 0.4.0:
-
-https://gist.github.com/josephg/873a21d4558fd69aeccea19c3df96672
-
-To build this project you need to follow the steps there to get a wasm enabled version of LLVM setup.
-
 ## Building
 
-To build this project with a working Zig at 0.4.0 and TypeScript install at the project root just type.
+To build this project with a working Zig at 0.6.0 and TypeScript install at the project root just type.
 
 ```
-zig build install
+zig build
 ```
 
-You need to move the resulting wasmtest.wasm file from /bin/ to /www/. One has been committed if you're happy omitting this step.
+You need to move the resulting wasmtest.wasm file from /zig-cache/ to /www/. One has been committed if you're happy omitting this step.
 
 For good measure you can then build the TypeScript file:
 
