@@ -3,7 +3,7 @@ A minimal Web Assembly example built from Zig's init-lib.
 
 ## Building
 
-To build this project with a working Zig at 0.6.0 and TypeScript install at the project root just type.
+To build this project with a working Zig at 0.9.1 and TypeScript install at the project root just type.
 
 ```
 zig build

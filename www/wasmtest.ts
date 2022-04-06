@@ -1,4 +1,7 @@
 fetch("wasmtest.wasm")
     .then(response => response.arrayBuffer())
     .then(bytes => WebAssembly.instantiate(bytes, {imports:{}}))
-    .then(results => console.log(results.instance.exports.add(3,4)));
+    .then(results => {
+        const add = (results.instance.exports.add as CallableFunction);
+        console.log(add(3,4));
+    });
