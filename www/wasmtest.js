@@ -9,7 +9,7 @@ function console_log_ex(location, size) {
 }
 // define our imports
 var imports = {
-    imports: {
+    env: {
         console_log_ex: console_log_ex
     }
 };
