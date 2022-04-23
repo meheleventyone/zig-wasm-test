@@ -11,7 +11,7 @@ function console_log_ex(location : number, size : number) {
 
 // define our imports
 const imports : WebAssembly.Imports = {
-    imports : {
+    env : {
         console_log_ex : console_log_ex,
     },
 };
