@@ -1,15 +1,15 @@
 # zig-wasm-test
-A minimal Web Assembly example built from Zig's init-lib.
+A minimal Web Assembly example built with Zig.
 
 ## Building
 
-To build this project with a working Zig at 0.9.1 and TypeScript install at the project root just type.
+To build this project with a working Zig at 0.11.0 and TypeScript install at the project root just type.
 
 ```
 zig build
 ```
 
-You need to move the resulting wasmtest.wasm file from /zig-cache/ to /www/. One has been committed if you're happy omitting this step.
+You need to move the resulting wasmtest.wasm file from /zig-out/lib to /www/. One has been committed if you're happy omitting this step.
 
 For good measure you can then build the TypeScript file:
 
