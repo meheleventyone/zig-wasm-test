@@ -10,7 +10,7 @@ pub fn build(b: *Builder) void {
         .optimize = .Debug,
         .version = .{.major = 0, .minor = 0, .patch=1},
         });
-    lib.rdynamic = true;
+    lib.rdynamic = true; // by default exports won't be exported so do this to make it all work
     
     const install = b.addInstallArtifact(lib, .{});
     install.step.dependOn(&lib.step);
