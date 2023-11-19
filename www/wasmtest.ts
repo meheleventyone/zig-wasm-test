@@ -11,16 +11,14 @@ function console_log_ex(location : number, size : number) {
 
 // define our imports
 const imports : WebAssembly.Imports = {
-    imports : {
+    env: {
+        memory: new WebAssembly.Memory({initial: 1}),
         console_log_ex : console_log_ex,
-    },
+    }
 };
 
 // do the thing
-fetch("wasmtest.wasm")
-    .then(response => response.arrayBuffer())
-    .then(bytes => WebAssembly.instantiate(bytes, imports))
-    .then(results => {
+WebAssembly.instantiateStreaming(fetch("wasmtest.wasm"), imports).then(results => {
         instance = results.instance;
         // grab our exported function from wasm
         const add = (results.instance.exports.add as CallableFunction);

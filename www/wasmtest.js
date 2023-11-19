@@ -9,15 +9,13 @@ function console_log_ex(location, size) {
 }
 // define our imports
 var imports = {
-    imports: {
-        console_log_ex: console_log_ex
+    env: {
+        memory: new WebAssembly.Memory({ initial: 1 }),
+        console_log_ex: console_log_ex,
     }
 };
 // do the thing
-fetch("wasmtest.wasm")
-    .then(function (response) { return response.arrayBuffer(); })
-    .then(function (bytes) { return WebAssembly.instantiate(bytes, imports); })
-    .then(function (results) {
+WebAssembly.instantiateStreaming(fetch("wasmtest.wasm"), imports).then(function (results) {
     instance = results.instance;
     // grab our exported function from wasm
     var add = results.instance.exports.add;
