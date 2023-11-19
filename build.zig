@@ -7,7 +7,7 @@ pub fn build(b: *Builder) void {
         .name = "wasmtest",
         .root_source_file = .{.path = "src/main.zig" },
         .target = .{.cpu_arch = .wasm32, .os_tag = .freestanding},
-        .optimize = .Debug,
+        .optimize = .Debug, // you can use the b.standardOptimizeOption(.{}) above this function call instead
         .version = .{.major = 0, .minor = 0, .patch=1},
         });
     lib.rdynamic = true; // by default exports won't be exported so do this to make it all work
